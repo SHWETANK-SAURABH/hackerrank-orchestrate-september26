@@ -1,0 +1,99 @@
+{
+  "_comment": "One-time structured extraction of every dataset/media/images/*.png referenced by a blank-amount financial event, per implementation/phase5.md Part 3/31 ('extract once, cache, reuse'). Each entry is exactly the shape a vision model call would return: {amount, currency, confidence, evidence_text}. No live model/API call is made at runtime; CachedVisionExtractor in code/evidence.py looks these up by image_id. image_04's amount is genuinely unresolved because the visible receipt total is cut off before a final grand total; it is intentionally omitted rather than guessed.",
+  "image_01": {
+    "amount": "4365000",
+    "currency": "IDR",
+    "confidence": "high",
+    "evidence_text": "Pay Slip Aug-2019 (HR Department, M NURHUDA SY): Net Pay = IDR 4,365,000, transferred to Bank Central Asia."
+  },
+  "image_02": {
+    "amount": "100000",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Rent Receipt #9453: Total Amount to be Received 2,00,000.00; Amount Received 1,00,000.00; Balance Due 1,00,000.00 -- the outstanding balance matches the event description 'Outstanding rent balance'."
+  },
+  "image_03": {
+    "amount": "41272.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Riddhi Siddhi (Nuts and Spices) Bill of Supply #1125000158: Net Amount 41272.0, Cash Paid 41272.00."
+  },
+  "image_04": {
+    "amount": null,
+    "currency": "INR",
+    "confidence": "low",
+    "evidence_text": "Delivery app order screenshot shows 'Item Bill ₹2854.00' but the total order bill section is cropped before a final grand total (a further 'Delivery ...' line is visible but cut off) -- the true total cannot be reliably read from this image."
+  },
+  "image_05": {
+    "amount": "704.05",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Airtel account summary: 'Amount due till 06-Feb-2026 = 704.05' (the outstanding telecom bill; a higher post-due-date amount of 822.05 also appears but is the late/penalty figure, not the current outstanding bill)."
+  },
+  "image_06": {
+    "amount": "1995.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Blink Commerce (Grofers) GST invoice: Total INR 1995.00 ('One Thousand And Nine Hundred And Ninety-Five Rupees')."
+  },
+  "image_07": {
+    "amount": "8528",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Nagarjuna 1984 KMR tax invoice: SubTotal 8122.00 + taxes = 8528.10, with 'Grand Total (RS): 8528' as the final settled/rounded figure."
+  },
+  "image_08": {
+    "amount": "15339.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Society maintenance payment receipt: 'Total Amount Received ₹ 15,339.00' via ICICI Bank/paytm, against Invoice 6455."
+  },
+  "image_09": {
+    "amount": "723.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Water bill payment receipt: 'Total Amount Received ₹ 723.00' against Invoice 6320."
+  },
+  "image_10": {
+    "amount": "79679.26",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Grocery GST invoice: Sub Total 72,045.00 plus taxes, 'Total ₹79,679.26', 'Balance Due ₹79,679.26'."
+  },
+  "image_11": {
+    "amount": "3650.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "Jeevan Hospital provisional bill: 'Total Bill Amount: 3650.00', 'Amount Payable: 3650.00', 'Amount Paid: 0.00', 'Balance: 3650.00' -- matches the event description 'Hospital bill payable'."
+  },
+  "image_12": {
+    "amount": "33.50",
+    "currency": "USD",
+    "confidence": "high",
+    "evidence_text": "CityCab Service taxi receipt: Subtotal $33.50, Tax $0.00, Total $33.50 (cash paid $40.00, change $6.50)."
+  },
+  "image_13": {
+    "amount": "2298",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "DailyObjects order confirmation: Item Total (2 items) ₹2,298, Delivery Free, 'Total paid ₹2,298'."
+  },
+  "image_14": {
+    "amount": "4543.00",
+    "currency": "INR",
+    "confidence": "medium",
+    "evidence_text": "Handwritten pharmacy receipt: line items (Samhan 1500, Moov spray 724, Axe oil 796, Stayfree 550, Benadryl 303, plus 670) sum to 4543.00; the handwritten 'TOTAL' figure itself is not cleanly legible, so the itemized sum is used as the corroborated best estimate rather than the ambiguous handwriting alone."
+  },
+  "image_15": {
+    "amount": "9968.00",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "IndiGo (InterGlobe Aviation) tax invoice, PNR UC83TT: 'Currency: INR', Grand Total (Incl Taxes) = 9,968.00."
+  },
+  "image_16": {
+    "amount": "393.22",
+    "currency": "INR",
+    "confidence": "high",
+    "evidence_text": "EV charging station invoice (Krishnagiri, Tamil Nadu): Total 393.22 ('Three Hundred and Ninety Three Rupees And Twenty Two Paise')."
+  }
+}
